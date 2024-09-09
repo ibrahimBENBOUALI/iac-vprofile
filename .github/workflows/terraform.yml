@@ -60,9 +60,10 @@ jobs:
          id: INGRES
          run: kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.1.3/deploy/static/provider/aws/deploy.yaml
          continue-on-error: true
+       
        - name: Terraform destroy
          id: destroy
-         if: steps.INGRES.outcome == 'success'
+       #  if: steps.INGRES.outcome == 'success'
          run: terraform destroy -auto-approve -input=false -parallelism=1 planfile
 
 
