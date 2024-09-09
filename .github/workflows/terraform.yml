@@ -64,6 +64,6 @@ jobs:
        - name: Terraform destroy
          id: destroy
        #  if: steps.INGRES.outcome == 'success'
-         run: terraform destroy -auto-approve -input=false -parallelism=1 planfile
+         run: terraform destroy -auto-approve -input=false -parallelism=1
 
 
