@@ -1,6 +1,16 @@
-name: "DESTROY WORKFLOW"
-on: workflow_dispatch
-
+name: "Vprofile IAC"
+on:
+  push:
+    branches:
+      - main
+      - stage
+    paths:  
+      - terraform/**
+  pull_request:
+    branches:
+      - main
+    paths:
+      - terraform/**
 
 env:
  # Credentials for deployment to AWS
